@@ -1,0 +1,256 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #e6f0ff, #ffffff);
+    color: #333;
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    max-width: 1200px;
+    margin: auto;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #0e2452;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.photo-frame {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    margin-bottom: 20px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.photo-frame:hover {
+    transform: scale(1.05);
+}
+
+.name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 16px;
+    color: #a2c1ff;
+    margin-bottom: 30px;
+}
+
+/* Contact info */
+.contact-info {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #a2c1ff;
+}
+
+/* Skills */
+.skills {
+    margin-top: 40px;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.skills ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skills li {
+    padding: 5px 0;
+}
+
+/* Main Content */
+.main-content {
+    padding: 40px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 2px solid #0e2452;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #0e2452;
+}
+
+/* Timeline */
+.timeline {
+    list-style: none;
+    border-left: 2px solid #0e2452;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.timeline li {
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.timeline .time {
+    font-weight: bold;
+    color: #0e2452;
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 10px;
+}
+
+.timeline li::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #0e2452;
+    border-radius: 50%;
+    left: -6px;
+    top: 5px;
+}
+
+/* Projects */
+.project-item {
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.project-item:hover {
+    transform: scale(1.02);
+}
+
+.project-item h3 {
+    color: #0e2452;
+}
+
+/* Social links */
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    color: #0e2452;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #3366cc;
+    text-decoration: underline;
+}
+
+/* CV Download Button */
+.btn-download {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #0e2452;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #3366cc;
+}
+
+/* Popup */
+.popup {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    color: #000;
+    text-align: left;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: #121212;
+    color: #f0f0f0;
+}
+
+body.dark-mode .sidebar {
+    background-color: #1e1e2f;
+}
+
+body.dark-mode .section-title,
+body.dark-mode .timeline .time,
+body.dark-mode .project-item h3,
+body.dark-mode .social-links a {
+    color: #90caf9;
+}
+
+body.dark-mode .popup-content {
+    background-color: #2c2c2c;
+    color: #fff;
+}
